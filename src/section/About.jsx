@@ -7,7 +7,7 @@ function About() {
     <Container id="about" className="pb-28">
       <Motion>
         <SectionBox title="About">
-          <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed max-w-[750px] mx-auto text-center">
+          <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed max-w-[750px] mx-auto text-center break-keep">
             웹 화면을 만들며 사용자에게 새로운 경험을 전하는 프론트엔드 개발자를
             꿈꾸는 이현준입니다.
             <br />

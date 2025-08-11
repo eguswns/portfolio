@@ -6,7 +6,7 @@ function SectionBox({ title, children }) {
       <div className="border-2 border-[#aab5c9] rounded-md px-6 py-12">
         {children}
       </div>
-      <SectionTitle title={title} />
+      <SectionTitle title={title} className="pb-5" />
     </div>
   );
 }

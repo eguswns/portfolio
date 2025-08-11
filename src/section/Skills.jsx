@@ -31,7 +31,7 @@ function Skills() {
                 className="relative group cursor-pointer w-[60px] sm:w-[70px]"
               >
                 <img src={image} alt={name} className="w-full h-auto" />
-                <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 text-xs px-2 py-1 rounded whitespace-nowrap pointer-events-none bg-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 text-xs px-2 py-1 rounded whitespace-nowrap pointer-events-none bg-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {name}
                 </span>
               </div>
