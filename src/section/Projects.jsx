@@ -6,7 +6,7 @@ import js from "../assets/javascript.svg";
 import starbucks from "../assets/images/starbucks.png";
 import ipad from "../assets/images/ipad.png";
 import Motion from "../components/Motion";
-import SectionBox from "../components/SectionBox";
+import SectionTitle from "../components/SectionTitle";
 
 const projectsData = [
   {
@@ -31,19 +31,18 @@ function Projects() {
   return (
     <Container id="projects" className="pb-28">
       <Motion>
-        <SectionBox title="Projects">
-          <div
-            className="grid 
+        <SectionTitle title="Projects" />
+        <div
+          className="grid 
             gap-6 sm:gap-8 md:gap-12
             grid-cols-[repeat(auto-fit,minmax(280px,1fr))]"
-          >
-            {projectsData.map((project, idx) => (
-              <div key={idx} className="w-full max-w-full">
-                <Project {...project} />
-              </div>
-            ))}
-          </div>
-        </SectionBox>
+        >
+          {projectsData.map((project, idx) => (
+            <div key={idx} className="w-full max-w-full">
+              <Project {...project} />
+            </div>
+          ))}
+        </div>
       </Motion>
     </Container>
   );

@@ -3,7 +3,7 @@ import Container from "../components/Container";
 import emailjs from "@emailjs/browser";
 import Motion from "../components/Motion";
 import { ThemeContext } from "../context/ThemeContext";
-import SectionBox from "../components/SectionBox";
+import SectionTitle from "../components/SectionTitle";
 
 function Contact() {
   const form = useRef();
@@ -51,63 +51,60 @@ function Contact() {
   return (
     <Container id="contact" className="pb-28">
       <Motion>
-        <SectionBox title="Contact">
-          <form
-            ref={form}
-            onSubmit={handleSubmit}
-            className="w-full max-w-[750px] mx-auto flex flex-col gap-12"
-          >
-            <div>
-              <label className="block text-xs tracking-widest mb-2">NAME</label>
-              <input
-                type="text"
-                name="name"
-                placeholder="성함을 입력해주세요"
-                className={`w-full bg-transparent border-b ${
-                  isDark ? "border-white" : "border-black"
-                } outline-none py-2`}
-                autoComplete="off"
-              />
-            </div>
-            <div>
-              <label className="block text-xs tracking-widest mb-2">
-                EMAIL
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="이메일을 입력해주세요"
-                className={`w-full bg-transparent border-b ${
-                  isDark ? "border-white" : "border-black"
-                } outline-none py-2`}
-                autoComplete="off"
-              />
-            </div>
-            <div>
-              <label className="block text-xs tracking-widest mb-2">
-                MESSAGE
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                placeholder="내용을 입력해주세요"
-                className={`w-full bg-transparent border-b ${
-                  isDark ? "border-white" : "border-black"
-                } outline-none py-2 resize-none`}
-                autoComplete="off"
-              ></textarea>
-            </div>
-            <div className="flex flex-col items-center">
-              <button
-                type="submit"
-                className="tracking-widest font-bold text-sm mb-1"
-              >
-                SEND MESSAGE
-              </button>
-              <div className="w-[180px] h-0.5 bg-[#aab5c9] opacity-60" />
-            </div>
-          </form>
-        </SectionBox>
+        <SectionTitle title="Contact" />
+        <form
+          ref={form}
+          onSubmit={handleSubmit}
+          className="w-full max-w-[750px] mx-auto flex flex-col gap-12"
+        >
+          <div>
+            <label className="block text-xs tracking-widest mb-2">NAME</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="성함을 입력해주세요"
+              className={`w-full bg-transparent border-b ${
+                isDark ? "border-white" : "border-black"
+              } outline-none py-2`}
+              autoComplete="off"
+            />
+          </div>
+          <div>
+            <label className="block text-xs tracking-widest mb-2">EMAIL</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="이메일을 입력해주세요"
+              className={`w-full bg-transparent border-b ${
+                isDark ? "border-white" : "border-black"
+              } outline-none py-2`}
+              autoComplete="off"
+            />
+          </div>
+          <div>
+            <label className="block text-xs tracking-widest mb-2">
+              MESSAGE
+            </label>
+            <textarea
+              name="message"
+              rows={4}
+              placeholder="내용을 입력해주세요"
+              className={`w-full bg-transparent border-b ${
+                isDark ? "border-white" : "border-black"
+              } outline-none py-2 resize-none`}
+              autoComplete="off"
+            ></textarea>
+          </div>
+          <div className="flex flex-col items-center">
+            <button
+              type="submit"
+              className="tracking-widest font-bold text-sm mb-1"
+            >
+              SEND MESSAGE
+            </button>
+            <div className="w-[180px] h-0.5 bg-[#aab5c9] opacity-60" />
+          </div>
+        </form>
       </Motion>
     </Container>
   );
