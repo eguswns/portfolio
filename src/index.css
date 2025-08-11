@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+html.dark,
+body.dark {
+  background-color: #221f1f;
+}
+
+.active {
+  color: #aab5c9 !important;
+  font-weight: 700;
+  text-decoration: underline;
+}
