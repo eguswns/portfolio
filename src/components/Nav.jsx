@@ -7,7 +7,7 @@ import { ThemeContext } from "../context/ThemeContext";
 
 function Nav() {
   const [showLogo, setShowLogo] = useState(true);
-  const [isOpen, setIsOpen] = useState(false); // 햄버거 메뉴 열림 여부
+  const [isOpen, setIsOpen] = useState(false);
   const { isDark } = useContext(ThemeContext);
 
   useEffect(() => {
@@ -28,7 +28,6 @@ function Nav() {
 
   return (
     <nav className="w-full flex justify-between items-center">
-      {/* 로고 */}
       <img
         src={isDark ? iconWhite : iconBlack}
         alt="로고"
@@ -37,7 +36,6 @@ function Nav() {
         }`}
       />
 
-      {/* 🔽 PC용 메뉴 */}
       <ul className="hidden md:flex gap-[40px]">
         {navItems.map(({ label, target }) => (
           <li key={target}>
@@ -46,6 +44,7 @@ function Nav() {
               smooth={true}
               duration={500}
               offset={-70}
+              spy={true}
               activeClass="active"
               className={`cursor-pointer transition ${
                 isDark ? "text-white" : "text-black"
@@ -57,7 +56,6 @@ function Nav() {
         ))}
       </ul>
 
-      {/* ☰ 햄버거 버튼 (모바일에서만 보임) */}
       <div
         className="md:hidden z-50 cursor-pointer text-2xl"
         onClick={() => setIsOpen(!isOpen)}
@@ -69,7 +67,6 @@ function Nav() {
         )}
       </div>
 
-      {/* 📱 모바일 전체화면 메뉴 패널 */}
       {isOpen && (
         <div
           className={`fixed top-0 left-0 w-full h-screen bg-white dark:bg-[#1e1e1e] flex flex-col items-center justify-center gap-8 z-40 transition`}
@@ -80,8 +77,10 @@ function Nav() {
               to={target}
               smooth={true}
               duration={500}
+              spy={true}
+              activeClass="active"
               offset={-70}
-              onClick={() => setIsOpen(false)} // 클릭 후 메뉴 닫힘
+              onClick={() => setIsOpen(false)}
               className={`text-2xl font-bold ${
                 isDark ? "text-white" : "text-black"
               } hover:text-[#aab5c9] cursor-pointer`}

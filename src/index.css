@@ -14,7 +14,5 @@ body.dark {
 }
 
 .active {
-  color: #aab5c9 !important;
-  font-weight: 700;
-  text-decoration: underline;
+  @apply text-[#aab5c9] font-bold underline;
 }

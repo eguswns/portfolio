@@ -1,4 +1,4 @@
-function SectionTitle({ title, className = "" }) {
+function SectionTitle({ title }) {
   return (
     <div className="flex items-center w-full mb-10">
       <h2 className="text-[40px] font-extrabold text-[#aab5c9] leading-none md:text-[50px]">

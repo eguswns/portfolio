@@ -5,13 +5,9 @@ import js from "../assets/javascript.svg";
 import ts from "../assets/typescript.svg";
 import react from "../assets/react.svg";
 import Motion from "../components/Motion";
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
 import SectionTitle from "../components/SectionTitle";
 
 function Skills() {
-  const { isDark } = useContext(ThemeContext);
-
   const skills = [
     { image: html, name: "HTML" },
     { image: css, name: "CSS" },
